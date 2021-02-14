@@ -1,0 +1,12 @@
+# @install: lix --silent download "gh://github.com/scottPlusPlus/hawk#a26f121583b9648c2d3c4983846e322795a70f20" into hawk/0.0.1/github/a26f121583b9648c2d3c4983846e322795a70f20
+-lib compiletime
+-lib dataclass
+-lib json2object
+-lib jwt
+-lib pbkdf2
+-lib tink_core
+-lib utest
+-lib uuid
+-lib zenlog
+-cp ${HAXE_LIBCACHE}/hawk/0.0.1/github/a26f121583b9648c2d3c4983846e322795a70f20/src
+-D hawk=0.0.1

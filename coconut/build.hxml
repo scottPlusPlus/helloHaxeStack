@@ -1,0 +1,14 @@
+-cp src
+-lib coconut.vdom
+-lib coconut.bootstrap
+-lib coconut.router
+-lib tink_http
+-lib hawk
+-lib thx.core
+-lib tink_json
+-lib compiletime
+-main Main
+-dce full
+-D analyzer-optimize
+-D js_es=6
+-js bin/helloHawkCoconut.js

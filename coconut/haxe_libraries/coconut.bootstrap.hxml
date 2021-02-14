@@ -1,0 +1,4 @@
+# @install: lix --silent download "gh://github.com/markknol/coconut.bootstrap#17617da9f8c3a3488cccbb9bb19fa96edd77b66b" into coconut.bootstrap/0.1.0/github/17617da9f8c3a3488cccbb9bb19fa96edd77b66b
+-lib coconut.vdom
+-cp ${HAXE_LIBCACHE}/coconut.bootstrap/0.1.0/github/17617da9f8c3a3488cccbb9bb19fa96edd77b66b/src
+-D coconut.bootstrap=0.1.0

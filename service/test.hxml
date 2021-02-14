@@ -1,0 +1,8 @@
+-lib hawk
+-lib zenlog
+-lib json2object
+-lib polygonal-ds
+-cp src
+-cp test
+-main TestRunner
+-js bin/test.js

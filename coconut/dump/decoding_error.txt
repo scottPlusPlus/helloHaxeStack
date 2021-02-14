@@ -1,0 +1,513 @@
+[{
+	access: [APublic]
+	doc: null
+	kind: FFun({
+		args: [{
+			meta: null
+			name: __coco_data_
+			opt: false
+			type: TAnonymous([])
+			value: null
+		}]
+		expr: {
+			expr: EBlock([{
+				expr: EBlock([])
+				pos: #pos
+			}, {
+				expr: ECall({
+					expr: EField({
+						expr: EConst(CIdent(this))
+						pos: #pos
+					}, __initAttributes)
+					pos: #pos
+				}, [{
+					expr: EConst(CIdent(__coco_data_))
+					pos: #pos
+				}])
+				pos: #pos
+			}, {
+				expr: EVars([{
+					expr: {
+						expr: EConst(CIdent(null))
+						pos: #pos
+					}
+					isFinal: false
+					name: snapshot
+					type: null
+				}])
+				pos: #pos
+			}, {
+				expr: ECall({
+					expr: EConst(CIdent(super))
+					pos: #pos
+				}, [{
+					expr: EConst(CIdent(render))
+					pos: #pos
+				}, {
+					expr: EConst(CIdent(null))
+					pos: #pos
+				}, {
+					expr: EConst(CIdent(null))
+					pos: #pos
+				}, {
+					expr: EConst(CIdent(null))
+					pos: #pos
+				}, {
+					expr: EConst(CIdent(null))
+					pos: #pos
+				}])
+				pos: #pos
+			}, {
+				expr: ESwitch({
+					expr: EParenthesis({
+						expr: EConst(CIdent(null))
+						pos: #pos
+					})
+					pos: #pos
+				}, [{
+					expr: null
+					guard: null
+					values: [{
+						expr: EConst(CIdent(null))
+						pos: #pos
+					}]
+				}, {
+					expr: {
+						expr: EBlock([{
+							expr: ECall({
+								expr: EConst(CIdent(beforeUnmounting))
+								pos: #pos
+							}, [{
+								expr: EConst(CIdent(v))
+								pos: #pos
+							}])
+							pos: #pos
+						}])
+						pos: #pos
+					}
+					guard: null
+					values: [{
+						expr: EConst(CIdent(v))
+						pos: #pos
+					}]
+				}], null)
+				pos: #pos
+			}])
+			pos: #pos
+		}
+		params: []
+		ret: TPath({
+			name: Void
+			pack: []
+			params: []
+			sub: null
+		})
+	})
+	meta: null
+	name: new
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FFun({
+		args: []
+		expr: {
+			expr: EBlock([{
+				expr: EVars([{
+					expr: {
+						expr: ECall({
+							expr: EField({
+								expr: EConst(CIdent(CompileTime))
+								pos: #pos
+							}, buildDate)
+							pos: #pos
+						}, [])
+						pos: #pos
+					}
+					isFinal: false
+					name: buildTime
+					type: null
+				}])
+				pos: #pos
+			}, {
+				expr: EReturn({
+					expr: ECall({
+						expr: EField({
+							expr: EConst(CIdent(DateTools))
+							pos: #pos
+						}, format)
+						pos: #pos
+					}, [{
+						expr: EConst(CIdent(buildTime))
+						pos: #pos
+					}, {
+						expr: EConst(CString(%Y-%m-%d  %H:%M:%S, DoubleQuotes))
+						pos: #pos
+					}])
+					pos: #pos
+				})
+				pos: #pos
+			}])
+			pos: #pos
+		}
+		params: []
+		ret: TPath({
+			name: String
+			pack: []
+			params: []
+			sub: null
+		})
+	})
+	meta: []
+	name: compiledTime
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FProp(get, set, null, null)
+	meta: [{
+		name: :state
+		params: []
+		pos: #pos
+	}]
+	name: twits
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FFun({
+		args: []
+		expr: {
+			expr: EBlock([{
+				expr: EMeta({
+					name: :markup
+					params: []
+					pos: #pos
+				}, {
+					expr: EConst(CString(<Container>
+			<Row>
+				<Jumbotron>
+					<h1>Hello, world! sdf </h1>
+					<p>This frontend was compiled at ${compiledTime()}</p>
+				</Jumbotron>
+			</Row>
+			<UserSection/>
+			<RecentTwits twits=${twits}/>
+		</Container>, DoubleQuotes))
+					pos: #pos
+				})
+				pos: #pos
+			}])
+			pos: #pos
+		}
+		params: []
+		ret: TPath({
+			name: RenderResult
+			pack: [coconut, vdom]
+			params: []
+			sub: null
+		})
+	})
+	meta: [{
+		name: :noCompletion
+		params: []
+		pos: #pos
+	}]
+	name: render
+	pos: #pos
+}, {
+	access: [APrivate]
+	doc: null
+	kind: FVar(TPath({
+		name: State
+		pack: [tink, state]
+		params: [TPType(null <- expected enum value)]
+		sub: null
+	}), {
+		expr: ENew({
+			name: State
+			pack: [tink, state]
+			params: [TPType(null <- expected enum value)]
+			sub: null
+		}, [{
+			expr: EArrayDecl([])
+			pos: #pos
+		}, {
+			expr: EConst(CIdent(null))
+			pos: #pos
+		}])
+		pos: #pos
+	})
+	meta: [{
+		name: :noCompletion
+		params: []
+		pos: #pos
+	}]
+	name: __coco_twits
+	pos: #pos
+}, {
+	access: [AInline]
+	doc: null
+	kind: FFun({
+		args: []
+		expr: {
+			expr: EReturn({
+				expr: EField({
+					expr: EConst(CIdent(__coco_twits))
+					pos: #pos
+				}, value)
+				pos: #pos
+			})
+			pos: #pos
+		}
+		params: []
+		ret: null
+	})
+	meta: null
+	name: get_twits
+	pos: #pos
+}, {
+	access: [AInline]
+	doc: null
+	kind: FFun({
+		args: [{
+			meta: null
+			name: param
+			opt: false
+			type: null
+			value: null
+		}]
+		expr: {
+			expr: EBlock([{
+				expr: ECall({
+					expr: EField({
+						expr: EConst(CIdent(__coco_twits))
+						pos: #pos
+					}, set)
+					pos: #pos
+				}, [{
+					expr: EConst(CIdent(param))
+					pos: #pos
+				}])
+				pos: #pos
+			}, {
+				expr: EReturn({
+					expr: EConst(CIdent(param))
+					pos: #pos
+				})
+				pos: #pos
+			}])
+			pos: #pos
+		}
+		params: []
+		ret: null
+	})
+	meta: null
+	name: set_twits
+	pos: #pos
+}, {
+	access: null
+	doc: null
+	kind: FFun({
+		args: [{
+			meta: null
+			name: attributes
+			opt: false
+			type: TAnonymous([])
+			value: null
+		}]
+		expr: {
+			expr: EBlock([])
+			pos: #pos
+		}
+		params: []
+		ret: null
+	})
+	meta: [{
+		name: :noCompletion
+		params: []
+		pos: #pos
+	}]
+	name: __initAttributes
+	pos: #pos
+}, {
+	access: [AStatic]
+	doc: null
+	kind: FVar(null, {
+		expr: EObjectDecl([{
+			expr: {
+				expr: EField({
+					expr: EConst(CIdent(Homepage))
+					pos: #pos
+				}, new)
+				pos: #pos
+			}
+			field: create
+			quotes: Unquoted
+		}, {
+			expr: {
+				expr: EFunction(FAnonymous, {
+					args: [{
+						meta: null
+						name: attr
+						opt: false
+						type: null
+						value: null
+					}, {
+						meta: null
+						name: v
+						opt: false
+						type: null
+						value: null
+					}]
+					expr: {
+						expr: ECall({
+							expr: EField({
+								expr: EParenthesis({
+									expr: ECheckType({
+										expr: ECast({
+											expr: EConst(CIdent(v))
+											pos: #pos
+										}, null)
+										pos: #pos
+									}, TPath({
+										name: Homepage
+										pack: []
+										params: []
+										sub: null
+									}))
+									pos: #pos
+								})
+								pos: #pos
+							}, __initAttributes)
+							pos: #pos
+						}, [{
+							expr: EConst(CIdent(attr))
+							pos: #pos
+						}])
+						pos: #pos
+					}
+					params: []
+					ret: null
+				})
+				pos: #pos
+			}
+			field: update
+			quotes: Unquoted
+		}])
+		pos: #pos
+	})
+	meta: null
+	name: __type
+	pos: #pos
+}, {
+	access: [AStatic, APublic]
+	doc: null
+	kind: FFun({
+		args: [{
+			meta: null
+			name: hxxMeta
+			opt: false
+			type: TAnonymous([{
+				access: null
+				doc: null
+				kind: FProp(default, never, TPath({
+					name: Key
+					pack: [coconut, diffing]
+					params: []
+					sub: null
+				}), null)
+				meta: [{
+					name: :optional
+					params: []
+					pos: #pos
+				}]
+				name: key
+				pos: #pos
+			}, {
+				access: null
+				doc: null
+				kind: FProp(default, never, TPath({
+					name: Ref
+					pack: [coconut, ui]
+					params: [TPType(TPath({
+						name: Homepage
+						pack: []
+						params: []
+						sub: null
+					}))]
+					sub: null
+				}), null)
+				meta: [{
+					name: :optional
+					params: []
+					pos: #pos
+				}]
+				name: ref
+				pos: #pos
+			}])
+			value: null
+		}, {
+			meta: null
+			name: attributes
+			opt: false
+			type: TAnonymous([])
+			value: null
+		}]
+		expr: {
+			expr: EReturn({
+				expr: ECall({
+					expr: EField({
+						expr: EField({
+							expr: EField({
+								expr: EField({
+									expr: EConst(CIdent(coconut))
+									pos: #pos
+								}, diffing)
+								pos: #pos
+							}, VNode)
+							pos: #pos
+						}, VNodeData)
+						pos: #pos
+					}, VWidget)
+					pos: #pos
+				}, [{
+					expr: ECast({
+						expr: EConst(CIdent(__type))
+						pos: #pos
+					}, null)
+					pos: #pos
+				}, {
+					expr: EField({
+						expr: EConst(CIdent(hxxMeta))
+						pos: #pos
+					}, ref)
+					pos: #pos
+				}, {
+					expr: EField({
+						expr: EConst(CIdent(hxxMeta))
+						pos: #pos
+					}, key)
+					pos: #pos
+				}, {
+					expr: EConst(CIdent(attributes))
+					pos: #pos
+				}])
+				pos: #pos
+			})
+			pos: #pos
+		}
+		params: []
+		ret: TPath({
+			name: RenderResult
+			pack: [coconut, vdom]
+			params: []
+			sub: null
+		})
+	})
+	meta: null
+	name: fromHxx
+	pos: #pos
+}]
+line 215: expected enum value
+line 221: expected enum value

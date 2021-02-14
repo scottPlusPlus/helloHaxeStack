@@ -1,0 +1,3 @@
+# @install: lix --silent download "gh://github.com/scottPlusPlus/zenlog#4cd5314c05043b5bfed35c677086c95a5843c6f5" into zenlog/0.0.1/github/4cd5314c05043b5bfed35c677086c95a5843c6f5
+-cp ${HAXE_LIBCACHE}/zenlog/0.0.1/github/4cd5314c05043b5bfed35c677086c95a5843c6f5/src
+-D zenlog=0.0.1
